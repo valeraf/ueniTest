@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import React from "react";
+import PropTypes from 'prop-types';
 import { CircularProgress } from "material-ui/Progress";
 import { withStyles } from "material-ui/styles";
 
@@ -15,6 +16,11 @@ const Loader = ({loading, classes}) => {
         </div>
     )
 }
+
+Loader.propTypes = {
+    loading: PropTypes.bool,
+    classes: PropTypes.object,
+};
 
 const styles = theme => ({
     loader: {

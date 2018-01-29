@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Grid from "material-ui/Grid";
 import Select from "material-ui/Select";
 import Typography from "material-ui/Typography";
@@ -72,3 +73,10 @@ export default class FilterView extends React.Component {
     );
   }
 }
+
+FilterView.propTypes = {
+  categories: PropTypes.array,
+  filter: PropTypes.string,
+  sort: PropTypes.oneOf(['ASC', 'DESC']),
+  isDetail: PropTypes.bool,
+};

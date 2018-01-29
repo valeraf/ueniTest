@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Grid from "material-ui/Grid";
 import Item from "../../components/listItem";
 
@@ -12,3 +13,7 @@ export default class ListView extends React.Component {
     );
   }
 }
+
+ListView.propTypes = {
+  data: PropTypes.array,
+};

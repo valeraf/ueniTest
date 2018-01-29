@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { withStyles } from "material-ui/styles";
 import AppBar from "material-ui/AppBar";
@@ -41,5 +42,10 @@ const styles = theme => ({
     marginRight: "auto"
   }
 });
+
+Header.propTypes = {
+  classes: PropTypes.object,
+  isDetail: PropTypes.bool,
+};
 
 export default withStyles(styles)(Header);

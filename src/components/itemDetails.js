@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Typography from "material-ui/Typography";
 import { withStyles } from "material-ui/styles";
 
@@ -19,6 +20,16 @@ const ItemDetails = ({name, country, classes, description, descrStyles}) => {
         </div>
     )
 }
+
+// {name, country, classes, description, descrStyles}
+
+ItemDetails.propTypes = {
+    name: PropTypes.string,
+    country: PropTypes.string,
+    description: PropTypes.string,
+    descrStyles: PropTypes.object,
+    classes: PropTypes.object,
+};
 
 const styles = theme => ({
     country: {
